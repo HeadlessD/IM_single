@@ -1,0 +1,10 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_SETTING_BLACKNOTCARELIST_MODIFY_RS
+{
+	s_rs_head:commonpack.S_RS_HEAD;
+	user_id:ulong;	//用户id
+}
+
+root_type T_MOMENTS_SETTING_BLACKNOTCARELIST_MODIFY_RS;

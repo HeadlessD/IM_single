@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>QQ爱你</key>
+	<string>[爱你]</string>
+	<key>QQ鄙视</key>
+	<string>[鄙视]</string>
+	<key>QQ闭嘴</key>
+	<string>[闭嘴]</string>
+	<key>QQ吃惊</key>
+	<string>[吃惊]</string>
+	<key>QQ哈哈</key>
+	<string>[哈哈]</string>
+	<key>QQ害羞</key>
+	<string>[害羞]</string>
+	<key>QQ花心</key>
+	<string>[花心]</string>
+	<key>QQ挤眼</key>
+	<string>[挤眼]</string>
+	<key>QQ可爱</key>
+	<string>[可爱]</string>
+	<key>QQ可怜</key>
+	<string>[可怜]</string>
+	<key>QQ扣鼻屎</key>
+	<string>[扣鼻屎]</string>
+	<key>QQ失望</key>
+	<string>[失望]</string>
+	<key>QQ偷笑</key>
+	<string>[偷笑]</string>
+	<key>QQ微笑</key>
+	<string>[微笑]</string>
+	<key>QQ嘻嘻</key>
+	<string>[嘻嘻]</string>
+</dict>
+</plist>

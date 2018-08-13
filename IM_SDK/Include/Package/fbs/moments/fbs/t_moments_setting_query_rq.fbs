@@ -1,0 +1,10 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_SETTING_QUERY_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	user_id:ulong;  //用户id
+}
+
+root_type T_MOMENTS_SETTING_QUERY_RQ;

@@ -1,0 +1,14 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_TIMELINE_QUERY_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	user_id:ulong;                 //用户id	
+	start_time:ulong;		//查询开始时间
+	end_time:ulong;			//查询结束时间
+	page_index:int;			//分页参数，当前记录数
+	page_size:int;			//分页参数，最大记录数
+}
+
+root_type T_MOMENTS_TIMELINE_QUERY_RQ;

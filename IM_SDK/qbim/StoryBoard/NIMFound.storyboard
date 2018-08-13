@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fj1-s1-bW4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--发现-->
+        <scene sceneID="Fqd-p8-drb">
+            <objects>
+                <navigationController storyboardIdentifier="NIMFoundIdentify" title="发现" id="Fj1-s1-bW4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Sel-ww-OUC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cYO-Ui-Grs" kind="relationship" relationship="rootViewController" id="eeZ-P5-W3V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kH9-PY-ng3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-250" y="344"/>
+        </scene>
+        <!--Found View Controller-->
+        <scene sceneID="VEe-4x-t5h">
+            <objects>
+                <viewController id="cYO-Ui-Grs" customClass="NIMFoundViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dpF-vU-bkx"/>
+                        <viewControllerLayoutGuide type="bottom" id="VBL-WS-Hzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BPR-QI-xdq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euK-j1-Ey5" customClass="QBFoundListView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="euK-j1-Ey5" secondAttribute="trailing" id="QdE-Yj-Gp5"/>
+                            <constraint firstItem="euK-j1-Ey5" firstAttribute="leading" secondItem="BPR-QI-xdq" secondAttribute="leading" id="fh5-gY-A1R"/>
+                            <constraint firstItem="euK-j1-Ey5" firstAttribute="top" secondItem="BPR-QI-xdq" secondAttribute="top" id="orh-2a-Wfe"/>
+                            <constraint firstAttribute="bottom" secondItem="euK-j1-Ey5" secondAttribute="bottom" id="vkP-X0-vP4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2md-gy-io7"/>
+                    <connections>
+                        <outlet property="mainView" destination="euK-j1-Ey5" id="BGe-s7-6hS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTS-AD-tfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="337"/>
+        </scene>
+    </scenes>
+</document>

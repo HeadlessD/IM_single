@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d0a-qJ-pbx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--消息-->
+        <scene sceneID="jwV-KC-16s">
+            <objects>
+                <tableViewController id="8wj-2R-6XE" customClass="NIMThreadViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" id="MhY-Fr-AuK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="8wj-2R-6XE" id="jc0-63-4gV"/>
+                            <outlet property="delegate" destination="8wj-2R-6XE" id="hWw-ey-fGT"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="消息" id="qyL-HJ-kS7"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svn-hF-iWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="340"/>
+        </scene>
+        <!--钱宝-->
+        <scene sceneID="cCx-YU-rJC">
+            <objects>
+                <navigationController storyboardIdentifier="QBThreadIdentifier" title="钱宝" id="d0a-qJ-pbx" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xx1-yW-hg6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8wj-2R-6XE" kind="relationship" relationship="rootViewController" id="az1-eR-6aL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZg-Au-U0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="343"/>
+        </scene>
+        <!--Scan Code View Controller-->
+        <scene sceneID="T7a-fh-Fls">
+            <objects>
+                <viewController storyboardIdentifier="NIMScanCode" hidesBottomBarWhenPushed="YES" id="Pob-jS-tv0" customClass="NIMScanCodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9Y-ml-IbR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vqs-i8-s5l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NNq-0a-IRT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2X-DR-Pgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="-327"/>
+        </scene>
+        <!--通讯录-->
+        <scene sceneID="WbB-g5-0EC">
+            <objects>
+                <tableViewController storyboardIdentifier="NIMContactsViewController" title="通讯录" hidesBottomBarWhenPushed="YES" id="Nd9-Zz-0Ja" customClass="NIMContactsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tou-22-Kve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="scaleAspectFill" searchBarStyle="minimal" placeholder="搜索" id="o6n-RL-PiJ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="Nd9-Zz-0Ja" id="CQU-kR-Xa6"/>
+                            </connections>
+                        </searchBar>
+                        <connections>
+                            <outlet property="dataSource" destination="Nd9-Zz-0Ja" id="qJe-Br-ajb"/>
+                            <outlet property="delegate" destination="Nd9-Zz-0Ja" id="p8g-s3-zBo"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="通讯录" id="B3j-3X-Iln">
+                        <barButtonItem key="rightBarButtonItem" title="添加好友" id="QNB-qe-it6">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="showCoverView:" destination="Nd9-Zz-0Ja" id="cbM-FB-wHR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="7sf-D9-7W4" id="yBK-RZ-oQa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ss-eh-aeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="77I-Aq-1q4">
+                    <connections>
+                        <outlet property="delegate" destination="Nd9-Zz-0Ja" id="tew-cv-d4S"/>
+                        <outlet property="searchContentsController" destination="Nd9-Zz-0Ja" id="8uf-iw-rm5"/>
+                        <outlet property="searchResultsDataSource" destination="Nd9-Zz-0Ja" id="4qO-p8-qts"/>
+                        <outlet property="searchResultsDelegate" destination="Nd9-Zz-0Ja" id="Nd6-GC-tgG"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="7sf-D9-7W4">
+                    <connections>
+                        <outlet property="delegate" destination="Nd9-Zz-0Ja" id="dwY-3o-byJ"/>
+                        <outlet property="searchBar" destination="o6n-RL-PiJ" id="J8w-dY-4UO"/>
+                        <outlet property="searchContentsController" destination="Nd9-Zz-0Ja" id="pjh-Rx-u70"/>
+                        <outlet property="searchResultsDataSource" destination="Nd9-Zz-0Ja" id="5Qj-hE-Zue"/>
+                        <outlet property="searchResultsDelegate" destination="Nd9-Zz-0Ja" id="i21-Ul-2qt"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1219" y="851"/>
+        </scene>
+    </scenes>
+</document>

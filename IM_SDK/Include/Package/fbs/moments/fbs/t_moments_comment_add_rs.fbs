@@ -1,0 +1,11 @@
+include "../../common/fbs/common.fbs";
+include "./t_moments_common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_COMMENT_ADD_RS
+{
+	s_rs_head:commonpack.S_RS_HEAD;
+	comment:T_MOMENTS_COMMENT_DTO;	//评论内容
+}
+
+root_type T_MOMENTS_COMMENT_ADD_RS;

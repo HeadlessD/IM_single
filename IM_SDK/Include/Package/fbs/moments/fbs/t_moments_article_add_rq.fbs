@@ -1,0 +1,19 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_ARTICLE_ADD_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	article_id:ulong;	//文章id(客户端生成)
+	user_id:ulong;                 //用户id
+	user_nickname:string;                  //用户昵称
+	title:string;	//标题
+	content_type:int;	//内容类型 10(纯文字)|20(图文)|30(视频)|40(网页分享)|50(广告)
+	content:string;	//内容
+	priv_type:int;	//阅读权限类型 1公开2秘密3白名单4黑名单
+	white_list:string;	//阅读白名单用户id列表,中间用','隔开,最后以','结尾
+	black_list:string;	//阅读黑名单用户id列表,中间用','隔开,最后以','结尾
+	create_time:ulong; //创建时间
+}
+
+root_type T_MOMENTS_ARTICLE_ADD_RQ;

@@ -1,0 +1,12 @@
+include "../../common/fbs/common.fbs";
+
+namespace offcialpack;
+
+// 公众号端获取历史消息
+table T_CLIENT_OFFCIAL_GET_HISTORY_MSG_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	message_id:ulong;									// 消息编号
+}
+
+root_type T_CLIENT_OFFCIAL_GET_HISTORY_MSG_RQ;

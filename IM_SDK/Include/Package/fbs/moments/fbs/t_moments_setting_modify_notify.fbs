@@ -1,0 +1,11 @@
+include "../../common/fbs/common.fbs";
+include "./t_moments_common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_SETTING_MODIFY_NOTIFY
+{
+	user_id:ulong;			//被通知用户id
+	setting:T_MOMENTS_SETTING_DTO;	//好友朋友圈设置
+}
+
+root_type T_MOMENTS_SETTING_MODIFY_NOTIFY;

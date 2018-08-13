@@ -1,0 +1,11 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_ARTICLE_DELETE_RS
+{
+	s_rs_head:commonpack.S_RS_HEAD;
+	article_user_id:ulong;			//文章用户ID
+	article_id:ulong;                      //文章ID
+}
+
+root_type T_MOMENTS_ARTICLE_DELETE_RS;

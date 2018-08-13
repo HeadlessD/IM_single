@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Expression_01</key>
+	<string>[微笑]</string>
+	<key>Expression_02</key>
+	<string>[郁闷]</string>
+	<key>Expression_03</key>
+	<string>[花心]</string>
+	<key>Expression_04</key>
+	<string>[惊讶]</string>
+	<key>Expression_05</key>
+	<string>[流泪]</string>
+	<key>Expression_06</key>
+	<string>[害羞]</string>
+	<key>Expression_07</key>
+	<string>[无语]</string>
+	<key>Expression_08</key>
+	<string>[尴尬]</string>
+	<key>Expression_09</key>
+	<string>[生气]</string>
+	<key>Expression_10</key>
+	<string>[鬼脸]</string>
+	<key>Expression_11</key>
+	<string>[奸笑]</string>
+	<key>Expression_12</key>
+	<string>[抓狂]</string>
+	<key>Expression_13</key>
+	<string>[兴奋]</string>
+	<key>Expression_14</key>
+	<string>[坏笑]</string>
+	<key>Expression_15</key>
+	<string>[苦笑]</string>
+	<key>Expression_16</key>
+	<string>[冷汗]</string>
+	<key>Expression_17</key>
+	<string>[不满]</string>
+	<key>Expression_18</key>
+	<string>[鄙视]</string>
+	<key>Expression_19</key>
+	<string>[挖鼻]</string>
+	<key>Expression_20</key>
+	<string>[亲亲]</string>
+	<key>Expression_21</key>
+	<string>[瞌睡]</string>
+	<key>Expression_22</key>
+	<string>[赞同]</string>
+	<key>Expression_23</key>
+	<string>[反对]</string>
+	<key>Expression_24</key>
+	<string>[鼓掌]</string>
+	<key>Expression_25</key>
+	<string>[爱心]</string>
+	<key>Expression_26</key>
+	<string>[鲜花]</string>
+	<key>Expression_27</key>
+	<string>[猪头]</string>
+	<key>Expression_28</key>
+	<string>[酷哥]</string>
+</dict>
+</plist>

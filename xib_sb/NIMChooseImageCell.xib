@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NIMChooseImageCell" rowHeight="103" id="KGk-i7-Jjw" customClass="NIMChooseImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSN-5l-ijQ">
+                        <rect key="frame" x="0.0" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="0.45901814099999999" green="0.45900443200000002" blue="0.45901218059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="imageViewClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vwY-ND-ab6"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOO-63-4fu">
+                        <rect key="frame" x="110" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="0.45901814099999999" green="0.45900443200000002" blue="0.45901218059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="imageViewClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UOc-S1-K0N"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N9-mJ-PGq">
+                        <rect key="frame" x="220" y="10" width="100" height="100"/>
+                        <color key="backgroundColor" red="0.45901814099999999" green="0.45900443200000002" blue="0.45901218059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="imageViewClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pJh-wf-Ca4"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_dialog_tick00" translatesAutoresizingMaskIntoConstraints="NO" id="jNe-7p-Zca">
+                        <rect key="frame" x="73" y="82" width="22" height="22"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_dialog_tick00" translatesAutoresizingMaskIntoConstraints="NO" id="au5-Wd-ruo">
+                        <rect key="frame" x="183" y="82" width="22" height="22"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_dialog_tick00" translatesAutoresizingMaskIntoConstraints="NO" id="L9k-gI-Y1K">
+                        <rect key="frame" x="293" y="82" width="22" height="22"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="QSN-5l-ijQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="35I-DW-5ZS"/>
+                    <constraint firstItem="xOO-63-4fu" firstAttribute="bottom" secondItem="au5-Wd-ruo" secondAttribute="bottom" constant="6" id="4KM-Lc-oQH"/>
+                    <constraint firstItem="QSN-5l-ijQ" firstAttribute="width" secondItem="xOO-63-4fu" secondAttribute="width" id="4hI-Tx-Rg3"/>
+                    <constraint firstItem="QSN-5l-ijQ" firstAttribute="width" secondItem="2N9-mJ-PGq" secondAttribute="width" id="BSS-br-MXU"/>
+                    <constraint firstItem="xOO-63-4fu" firstAttribute="trailing" secondItem="au5-Wd-ruo" secondAttribute="trailing" constant="5" id="NwZ-Wm-xu8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2N9-mJ-PGq" secondAttribute="trailing" constant="-8" id="Qa3-NY-XD2"/>
+                    <constraint firstItem="2N9-mJ-PGq" firstAttribute="leading" secondItem="xOO-63-4fu" secondAttribute="trailing" constant="10" id="RL5-Zi-eSw"/>
+                    <constraint firstItem="jNe-7p-Zca" firstAttribute="trailing" secondItem="QSN-5l-ijQ" secondAttribute="trailing" constant="-5" id="SDg-Re-r6u"/>
+                    <constraint firstItem="jNe-7p-Zca" firstAttribute="bottom" secondItem="QSN-5l-ijQ" secondAttribute="bottom" constant="-6" id="U8W-CN-JRc"/>
+                    <constraint firstItem="2N9-mJ-PGq" firstAttribute="bottom" secondItem="L9k-gI-Y1K" secondAttribute="bottom" constant="6" id="VtX-K0-Svb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xOO-63-4fu" secondAttribute="bottom" constant="-8.5" id="WHJ-H7-zob"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2N9-mJ-PGq" secondAttribute="bottom" constant="-8.5" id="X9a-yI-3Eh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QSN-5l-ijQ" secondAttribute="bottom" constant="-8.5" id="dDA-ch-oEm"/>
+                    <constraint firstItem="QSN-5l-ijQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="kR9-QM-ykp"/>
+                    <constraint firstItem="xOO-63-4fu" firstAttribute="leading" secondItem="QSN-5l-ijQ" secondAttribute="trailing" constant="10" id="ktO-PN-JIl"/>
+                    <constraint firstItem="xOO-63-4fu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="mmA-Ds-BDt"/>
+                    <constraint firstItem="2N9-mJ-PGq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="t5T-5U-aF9"/>
+                    <constraint firstItem="2N9-mJ-PGq" firstAttribute="trailing" secondItem="L9k-gI-Y1K" secondAttribute="trailing" constant="5" id="ww0-Ko-IoQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="btn1" destination="QSN-5l-ijQ" id="LgR-Kc-gAM"/>
+                <outlet property="btn2" destination="xOO-63-4fu" id="uBF-wV-Ce8"/>
+                <outlet property="btn3" destination="2N9-mJ-PGq" id="Aqb-WR-0k3"/>
+                <outlet property="img1" destination="jNe-7p-Zca" id="vtz-PO-jzm"/>
+                <outlet property="img2" destination="au5-Wd-ruo" id="vs3-5t-Uev"/>
+                <outlet property="img3" destination="L9k-gI-Y1K" id="lFa-a0-Cpf"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="-4"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_dialog_tick00" width="22" height="22"/>
+    </resources>
+</document>

@@ -1,0 +1,12 @@
+﻿include "../../common/fbs/common.fbs";
+
+namespace offcialpack;
+
+// 获取商家有无离线消息包
+table T_CLIENT_OFFCIAL_GET_UNREAD_CNT_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	list_b_id:[ulong];								//商家id列表
+}
+
+root_type T_CLIENT_OFFCIAL_GET_UNREAD_CNT_RQ;

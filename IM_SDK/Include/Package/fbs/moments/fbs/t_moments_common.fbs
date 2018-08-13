@@ -1,0 +1,55 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_TIMELINE_DTO
+{	
+	article_user_id:ulong;		//文章用户id
+	article_id:ulong;		//文章id
+}
+
+table T_MOMENTS_ARTICLE_DTO
+{
+	user_id:ulong;		//用户id
+	article_id:ulong;	//文章id
+	title:string;	//标题
+	content_type:int;	//内容类型 10(纯文字)|20(图文)|30(视频)|40(网页分享)|50(广告)
+	content:string;	//内容
+	priv_type:int;	//阅读权限类型 1公开2秘密3白名单4黑名单
+	white_list:string;	//阅读白名单用户id列表,中间用','隔开,最后以','结尾
+	black_list:string;	//阅读黑名单用户id列表,中间用','隔开,最后以','结尾
+	create_time:ulong; //创建时间
+}
+
+table T_MOMENTS_COMMENT_DTO
+{
+	comment_id:ulong;	//评论id
+	user_id:ulong;		//发表评论用户id
+	user_nickname:string;	//发表评论用户昵称
+	article_user_id:ulong;	//相关文章用户id
+	article_id:ulong;	//相关文章id
+	comment_type:byte;	//评论类型 1：普通评论 2：点赞
+	content:string;		//评论内容
+	commented_user_id:ulong;	//回复评论用户id
+	commented_user_nickname:string;	//回复评论用户昵称
+	create_time:ulong;	//评论时间
+}
+
+table T_MOMENTS_SETTING_DTO
+{
+	user_id:ulong;		//用户id
+	list_10_pic_free:byte;	//是否允许陌生人查看10张照片，0：否 1：是
+	moments_scope:byte;	//朋友圈查看范围  0:全部 1：最近三天 2：最近半年
+	moments_enable:byte;	//是否开启朋友圈入口 0：不开启 1：开启
+	moments_notice:byte;	//朋友圈信息提示（在“发现”按钮上面) 0：不提示 1：提示
+	black_list:string;	//不开放朋友圈好友id列表，中间用,分隔
+	not_care_list:string;	//不关注好友id列表，中间用,分隔
+	update_time:ulong;	//更新时间
+}
+
+table T_SETTING_LIST_DTO
+{
+	user_id:ulong;		//用户id
+	friend_id:ulong;	//好友id
+	list_type:byte;		//类型 1：黑名单  2：不关注名单
+	list_value:byte;	//关系值  0：删除  1：创建
+}

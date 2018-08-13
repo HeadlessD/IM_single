@@ -1,0 +1,89 @@
+//
+//  NIMSPublicTableViewCell.m
+//  QianbaoIM
+//
+//  Created by liunian on 14/9/23.
+//  Copyright (c) 2014年 liu nian. All rights reserved.
+//
+
+#import "NIMSPublicTableViewCell.h"
+
+@interface NIMSPublicTableViewCell ()
+//@property (nonatomic, strong, readwrite) PublicEntity *publicEntity;
+@end
+@implementation NIMSPublicTableViewCell
+//@synthesize publicEntity = _publicEntity;
+
+//- (void)updateWithPublicEntity:(PublicEntity *)publicEntity hasTip:(BOOL)hasTip{
+//    self.publicEntity = publicEntity;
+//    self.hasTip = hasTip;
+//}
+#pragma mark config
+- (void)makeConstraints{
+    [super makeConstraints];
+    if (_hasTip) {
+        [self.tipLablel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.mas_top).with.offset(5);
+            make.leading.equalTo(self.contentView.mas_leading).with.offset(15);
+            make.height.equalTo(@20);
+        }];
+        
+        [self.lineView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.tipLablel.mas_bottom).with.offset(5);
+            make.leading.equalTo(self.contentView.mas_leading).with.offset(10);
+            make.trailing.equalTo(self.contentView.mas_trailing).with.offset(0);
+            make.height.equalTo(@1);
+        }];
+        [self.iconView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.lineView.mas_bottom).with.offset(5);
+            make.leading.equalTo(self.contentView.mas_leading).with.offset(15);
+            make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-10);
+            make.width.equalTo(self.iconView.mas_height);
+        }];
+        
+    }else{
+        [self.iconView mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.mas_top).with.offset(10);
+            make.leading.equalTo(self.contentView.mas_leading).with.offset(15);
+            make.bottom.equalTo(self.contentView.mas_bottom).with.offset(-10);
+            make.width.equalTo(self.iconView.mas_height);
+        }];
+        
+    }
+   
+    [self.titleLable mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.iconView.mas_top).with.offset(0);
+        make.leading.equalTo(self.iconView.mas_trailing).with.offset(10);
+        make.trailing.equalTo(self.contentView.mas_trailing).with.offset(-10);
+        make.height.equalTo(@20);
+    }];
+    
+    [self.introLablel mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.titleLable.mas_bottom).with.offset(0);
+        make.leading.equalTo(self.titleLable.mas_leading);
+        make.trailing.equalTo(self.contentView.mas_trailing).with.offset(-10);
+        make.bottom.equalTo(self.iconView.mas_bottom);
+        //        make.height.equalTo(@20);
+    }];
+    
+}
+#pragma mark getter
+- (UILabel *)tipLablel{
+if (!_tipLablel) {
+_tipLablel = [[UILabel alloc] initWithFrame:CGRectZero];
+_tipLablel.numberOfLines = 1;
+_tipLablel.font = [UIFont systemFontOfSize:14];
+    _tipLablel.textColor = [UIColor lightGrayColor];
+    [self.contentView addSubview:_tipLablel];
+}
+    return _tipLablel;
+}
+- (UIImageView *)lineView{
+    if (!_lineView) {
+        _lineView = [[UIImageView alloc] initWithImage:nil];
+        _lineView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+        [self.contentView addSubview:_lineView];
+    }
+    return _lineView;
+}
+@end

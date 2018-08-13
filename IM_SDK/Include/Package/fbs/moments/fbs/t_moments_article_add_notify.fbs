@@ -1,0 +1,8 @@
+namespace momentspack;
+
+table T_MOMENTS_ARTICLE_ADD_NOTIFY
+{	
+	moments_change_at:ulong; //朋友圈更新时间	
+}
+
+root_type T_MOMENTS_ARTICLE_ADD_NOTIFY;

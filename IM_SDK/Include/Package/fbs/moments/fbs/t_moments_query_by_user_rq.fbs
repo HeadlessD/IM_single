@@ -1,0 +1,15 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_ARTICLE_QUERY_BY_USER_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	user_id:ulong;		//当前用户id
+	friend_id:ulong;	//指定好友id
+	start_time:ulong;	//指定时间段开始时间（数值小)
+	end_time:ulong;		//指定时间段结束时间（数值大)
+	page_index:int;		//第几条开始
+	page_size:int;		//返回多少条
+}
+
+root_type T_MOMENTS_ARTICLE_QUERY_BY_USER_RQ;

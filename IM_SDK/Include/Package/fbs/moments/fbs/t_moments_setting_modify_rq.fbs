@@ -1,0 +1,11 @@
+include "../../common/fbs/common.fbs";
+include "./t_moments_common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_SETTING_MODIFY_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	setting:T_MOMENTS_SETTING_DTO;	//配置信息, 注：black_list, not_care_list修改用单独请求，此处不用传
+}
+
+root_type T_MOMENTS_SETTING_MODIFY_RQ;

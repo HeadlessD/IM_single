@@ -1,0 +1,18 @@
+include "../../common/fbs/common.fbs";
+include "./t_moments_common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_FULL_INFO_DTO
+{
+	article:T_MOMENTS_ARTICLE_DTO;	//文章信息
+	comments:[T_MOMENTS_COMMENT_DTO]; //评论信息列表
+}
+
+table T_MOMENTS_QUERY_BY_IDS_RS
+{
+	s_rs_head:commonpack.S_RS_HEAD;
+	user_id:ulong;                 //当前用户id	
+	full_infos:[T_MOMENTS_FULL_INFO_DTO];	//朋友圈详细信息列表
+}
+
+root_type T_MOMENTS_QUERY_BY_IDS_RS;

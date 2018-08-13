@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>qb_dk</key>
+	<string>[#大哭]</string>
+	<key>qb_hx</key>
+	<string>[#花心]</string>
+	<key>qb_hxiao</key>
+	<string>[#坏笑]</string>
+	<key>qb_jy</key>
+	<string>[#加油]</string>
+	<key>qb_jya</key>
+	<string>[#惊讶]</string>
+	<key>qb_keai</key>
+	<string>[#可爱]</string>
+	<key>qb_kun</key>
+	<string>[#困]</string>
+	<key>qb_lh</key>
+	<string>[#流汗]</string>
+	<key>qb_qdd</key>
+	<string>[#钱多多]</string>
+	<key>qb_qz</key>
+	<string>[#庆祝]</string>
+	<key>qb_sq</key>
+	<string>[#生气]</string>
+	<key>qb_wx</key>
+	<string>[#微笑]</string>
+	<key>qb_yun</key>
+	<string>[#晕]</string>
+	<key>qb_zq</key>
+	<string>[#足球]</string>
+	<key>qb_yw</key>
+	<string>[#疑问]</string>
+	<key>qb_zj</key>
+	<string>[#着急]</string>
+</dict>
+</plist>

@@ -1,0 +1,12 @@
+include "../../common/fbs/common.fbs";
+namespace momentspack;
+
+table T_MOMENTS_SETTING_BLACKNOTCARELIST_MODIFY_RQ
+{
+	s_rq_head:commonpack.S_RQ_HEAD;
+	user_id:ulong;	//用户id
+	list_type:byte;	//类型 1：黑名单  2：不关注名单
+	list:string;	//用户id串，中间用,分隔
+}
+
+root_type T_MOMENTS_SETTING_BLACKNOTCARELIST_MODIFY_RQ;

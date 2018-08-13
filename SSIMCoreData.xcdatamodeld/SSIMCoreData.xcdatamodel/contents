@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17D47" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="AudioEntity" representedClassName="AudioEntity" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="file" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="audioFile" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <entity name="ChatEntity" representedClassName="ChatEntity" syncable="YES">
+        <attribute name="apId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chatType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ext" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isSender" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="msgContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mtype" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="offcialId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="oldMessageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="packId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sendUserName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sid" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="stype" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unread" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="audioFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioEntity" inverseName="chatRecord" inverseEntity="AudioEntity" syncable="YES"/>
+        <relationship name="imageFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageEntity" inverseName="chatRecord" inverseEntity="ImageEntity" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="chatRecord" inverseEntity="Location" syncable="YES"/>
+        <relationship name="offcialEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NOffcialEntity" inverseName="chatRecord" inverseEntity="NOffcialEntity" syncable="YES"/>
+        <relationship name="textFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TextEntity" inverseName="chatRecord" inverseEntity="TextEntity" syncable="YES"/>
+        <relationship name="vcard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VcardEntity" inverseName="chatRecord" inverseEntity="VcardEntity" syncable="YES"/>
+        <relationship name="videoFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideoEntity" inverseName="chatRecord" inverseEntity="VideoEntity" syncable="YES"/>
+    </entity>
+    <entity name="ChatListEntity" representedClassName="ChatListEntity" syncable="YES">
+        <attribute name="actualThread" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="apnswitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="badge" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chatType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="groupAssistantRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isflod" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPublic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageBodyIdType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="preview" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopAssistantRead" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showRedPublic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topAlign" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="CommentEntity" representedClassName="CommentEntity" syncable="YES">
+        <attribute name="articleId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="articleUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="commentId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="commentType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyUserNick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userNick" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ContactEntity" representedClassName="ContactEntity" syncable="YES">
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="vcard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VcardEntity" syncable="YES"/>
+    </entity>
+    <entity name="FDListEntity" representedClassName="FDListEntity" syncable="YES">
+        <attribute name="addToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="apnswitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdAddInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fdAvatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fdBlackShip" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdConsent" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdFriendShip" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdNickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fdOwnId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdPeerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdRemarkName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fdUnread" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAllLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullCNLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isInNewFriend" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spare" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="phoneBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhoneBookEntity" inverseName="fdList" inverseEntity="PhoneBookEntity" syncable="YES"/>
+        <relationship name="vcard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VcardEntity" inverseName="fdlist" inverseEntity="VcardEntity" syncable="YES"/>
+    </entity>
+    <entity name="GMember" representedClassName="GMember" syncable="YES">
+        <attribute name="allFullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="card" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="groupmembernickname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupList" inverseName="members" inverseEntity="GroupList" syncable="YES"/>
+        <relationship name="vcard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VcardEntity" inverseName="member" inverseEntity="VcardEntity" syncable="YES"/>
+    </entity>
+    <entity name="GroupList" representedClassName="GroupList" syncable="YES">
+        <attribute name="addMax" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="allFullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="apnswitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="capacity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="groupId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isModifyName" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="membercount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="memberid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="relation" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="remark" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="savedwitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selfcard" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showname" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="switchnotify" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GMember" inverseName="group" inverseEntity="GMember" syncable="YES"/>
+    </entity>
+    <entity name="ImageEntity" representedClassName="ImageEntity" syncable="YES">
+        <attribute name="bigFile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="file" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnailImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="transientImage" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="imageFile" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lng" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="location" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <entity name="MomentEntity" representedClassName="MomentEntity" syncable="YES">
+        <attribute name="blackList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contentType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ownerId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="priType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userNick" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="whiteList" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MomentSetEntity" representedClassName="MomentSetEntity" syncable="YES">
+        <attribute name="blackList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="listPicFree" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="momentsEnable" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="momentsNotice" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="momentsScope" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notCareList" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="NBusinessEntity" representedClassName="NBusinessEntity" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isPersonal" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wids" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="NIMRedBagEntity" representedClassName="NIMRedBagEntity" syncable="YES">
+        <attribute name="rb_desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_isGroup" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rb_messageID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rb_msgBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_openID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_openUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_sendID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_sendName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_status" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rb_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rb_wait" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NOffcialEntity" representedClassName="NOffcialEntity" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fansid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offcialid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="offcialEntity" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <entity name="NUnreadEntity" representedClassName="NUnreadEntity" syncable="YES">
+        <attribute name="chatType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sesssionid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="NWaiterEntity" representedClassName="NWaiterEntity" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="PhoneBookEntity" representedClassName="PhoneBookEntity" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullAllLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullCNLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isQbao" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sha1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sorted" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spare" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="fdList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FDListEntity" inverseName="phoneBook" inverseEntity="FDListEntity" syncable="YES"/>
+        <relationship name="vcard" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VcardEntity" inverseName="phoneBook" inverseEntity="VcardEntity" syncable="YES"/>
+    </entity>
+    <entity name="RemarkEntity" representedClassName="RemarkEntity" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="groupid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="TextEntity" representedClassName="TextEntity" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="textFile" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <entity name="VcardEntity" representedClassName="VcardEntity" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="apnswitch" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar300" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ct" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fdExtrInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullLitter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="localtionCity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="locationPro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageBodyId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestShip" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="signature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_sex" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userid" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userToken" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="vcard" inverseEntity="ChatEntity" syncable="YES"/>
+        <relationship name="fdlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FDListEntity" inverseName="vcard" inverseEntity="FDListEntity" syncable="YES"/>
+        <relationship name="member" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GMember" inverseName="vcard" inverseEntity="GMember" syncable="YES"/>
+        <relationship name="phoneBook" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhoneBookEntity" inverseName="vcard" inverseEntity="PhoneBookEntity" syncable="YES"/>
+    </entity>
+    <entity name="VideoEntity" representedClassName="VideoEntity" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="file" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="chatRecord" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatEntity" inverseName="videoFile" inverseEntity="ChatEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AudioEntity" positionX="-54" positionY="144" width="128" height="135"/>
+        <element name="ChatEntity" positionX="-54" positionY="-9" width="128" height="495"/>
+        <element name="ChatListEntity" positionX="-54" positionY="117" width="128" height="285"/>
+        <element name="CommentEntity" positionX="-27" positionY="144" width="128" height="195"/>
+        <element name="ContactEntity" positionX="-27" positionY="144" width="128" height="105"/>
+        <element name="FDListEntity" positionX="-27" positionY="144" width="128" height="375"/>
+        <element name="GMember" positionX="-18" positionY="153" width="128" height="240"/>
+        <element name="GroupList" positionX="-27" positionY="144" width="128" height="375"/>
+        <element name="ImageEntity" positionX="-36" positionY="153" width="128" height="150"/>
+        <element name="Location" positionX="-27" positionY="162" width="128" height="105"/>
+        <element name="MomentEntity" positionX="-27" positionY="144" width="128" height="225"/>
+        <element name="MomentSetEntity" positionX="-27" positionY="144" width="128" height="165"/>
+        <element name="NBusinessEntity" positionX="-27" positionY="144" width="128" height="150"/>
+        <element name="NIMRedBagEntity" positionX="-27" positionY="144" width="128" height="210"/>
+        <element name="NOffcialEntity" positionX="-27" positionY="144" width="128" height="135"/>
+        <element name="NUnreadEntity" positionX="-27" positionY="144" width="128" height="105"/>
+        <element name="NWaiterEntity" positionX="-18" positionY="153" width="128" height="120"/>
+        <element name="PhoneBookEntity" positionX="-27" positionY="144" width="128" height="285"/>
+        <element name="RemarkEntity" positionX="-27" positionY="144" width="128" height="105"/>
+        <element name="TextEntity" positionX="-9" positionY="171" width="128" height="75"/>
+        <element name="VcardEntity" positionX="-18" positionY="153" width="128" height="450"/>
+        <element name="VideoEntity" positionX="-27" positionY="144" width="128" height="135"/>
+    </elements>
+</model>

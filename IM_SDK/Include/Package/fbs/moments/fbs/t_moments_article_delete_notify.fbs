@@ -1,0 +1,9 @@
+namespace momentspack;
+
+table T_MOMENTS_ARTICLE_DELETE_NOTIFY
+{	
+	article_id:ulong;	//文章id
+	article_user_id:ulong;	//文章用户id
+}
+
+root_type T_MOMENTS_ARTICLE_DELETE_NOTIFY;
